@@ -1,7 +1,7 @@
 # RegattaTracker test compose
 
 ## Запуск
-```
+```bash
 docker-compose up -d
 ```
 ## Подготовка данных гонки
@@ -17,14 +17,14 @@ docker-compose up -d
 6. **Авторизуйтесь в UI панели очереди сообщений используя логин `admin` и пароль `secure_password_123`**
 7. **Откройте [очередь задач](http://127.0.0.1:15672/#/queues/%2F/tasks_queue)**
 8. **Отправьте сообщение следующего содержания:**
-```
+```json
 {
     "n": <race_id>
 }
 ```
-> На месте <race_id> напишите id гонки, загруженной в файловое хранилище
+> На месте `<race_id>` напишите id гонки, загруженной в файловое хранилище
 9. **Следите за логами, пока не увидите сообщение вида `Analytics for race <race_id> done`**
 10. **В [очереди уведомлений](http://127.0.0.1:15672/#/queues/%2F/notifications_queue) есть возможность посмотреть стаутс завершения задачи**
-11. **В [бакете `csv-reports`](http://localhost:9001/browser/csv-reports) с префиксом race_<race_id> будет лежать набор CSV отчетов по гонке**
-12. **В [бакете `pdf-reports`](http://localhost:9001/browser/pdf-reports) с префиксом race_<race_id> будет лежать набор PDF отчетов по гонке**
+11. **В [бакете `csv-reports`](http://localhost:9001/browser/csv-reports) с префиксом `race_<race_id>/` будет лежать набор CSV отчетов по гонке**
+12. **В [бакете `pdf-reports`](http://localhost:9001/browser/pdf-reports) с префиксом `race_<race_id>/` будет лежать набор PDF отчетов по гонке**
 

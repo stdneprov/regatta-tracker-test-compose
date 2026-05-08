@@ -25,6 +25,15 @@ docker-compose up -d
 > На месте `<race_id>` напишите id гонки, загруженной в файловое хранилище
 9. **Следите за логами, пока не увидите сообщение вида `Analytics for race <race_id> done`**
 10. **В [очереди уведомлений](http://127.0.0.1:15672/#/queues/%2F/notifications_queue) есть возможность посмотреть стаутс завершения задачи**
+Пример успешного сообщения:
+```json
+{
+    "n": <race_id>,
+    "status": "success",
+    "error": null
+}
+```
+
 11. **В [бакете `csv-reports`](http://localhost:9001/browser/csv-reports) с префиксом `race_<race_id>/` будет лежать набор CSV отчетов по гонке**
 12. **В [бакете `pdf-reports`](http://localhost:9001/browser/pdf-reports) с префиксом `race_<race_id>/` будет лежать набор PDF отчетов по гонке**
 

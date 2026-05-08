@@ -66,3 +66,6 @@ services:
       RABBITMQ_USER: "admin"
       RABBITMQ_PASS: "secure_password_123"
       RABBITMQ_HOST: "rabbitmq"
+      TASKS_QUEUE: "tasks_queue"
+      NOTIFICATIONS_QUEUE: "notifications_queue"
+      NOTIFICATIONS_EXCHANGE: ""
